@@ -98,3 +98,61 @@ Example:
 }
 ```
 
+# /users/profile
+## Description
+This endpoint is used to get the profile of the authenticated user.
+
+## Method
+GET
+
+## Headers
+Authorization: Bearer token (required)
+## Responses
+## Success
+## Status Code: 200 OK
+## Response Body:
+
+Example:
+```json
+{
+  "_id": "user_id",
+  "fullname": {
+    "firstname": "John",
+    "lastname": "Doe"
+  },
+  "email": "john.doe@example.com",
+  "socketId": null
+}
+```
+
+## Authentication Errors
+## Status Code: 401 Unauthorized
+## Response Body:
+```json
+{
+  "message": "Unauthorized"
+}
+```
+
+# /users/logout
+## Description
+This endpoint is used to log out the authenticated user.
+
+## Method
+GET
+
+## Headers
+Authorization: Bearer token (required)
+## Responses
+## Success
+## Status Code: 200 OK
+## Response Body:
+
+```json
+{
+  "message": "Logged out successfully"
+}
+```
+
+## Authentication Errors : Unauthorized
+
