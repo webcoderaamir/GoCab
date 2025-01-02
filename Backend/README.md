@@ -52,3 +52,49 @@ When the user is successfully registered, the API returns a JSON object with a J
     "socketId": null
   }
 }
+```
+
+### /users/login
+
+## Description
+This endpoint is used to log in an existing user.
+
+## Method
+POST
+
+## Request Body
+The request body should be a JSON object with the following fields:
+
+email: A string with a valid email format (required)
+password: A string with a minimum length of 7 characters (required)
+
+Example:
+```json
+{
+    "email": "john.doe@example.com",
+    "password": "password123"
+}
+```
+
+# Responses
+
+## Success
+## Status Code: 200 OK
+
+## Response Body:
+
+```json
+{
+  "token": "jwt_token",
+  "user": {
+    "_id": "user_id",
+    "fullname": {
+      "firstname": "John",
+      "lastname": "Doe"
+    },
+    "email": "john.doe@example.com",
+    "socketId": null
+  }
+}
+```
+
